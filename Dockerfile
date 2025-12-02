@@ -1,18 +1,29 @@
-# Use the latest version of Alpine Linux as the base image
+# Stage 1: Build Frontend
+FROM node:20-alpine AS frontend-builder
+WORKDIR /app/frontend
+RUN corepack enable && corepack prepare pnpm@latest --activate
+COPY frontend/package.json frontend/pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+COPY frontend/ .
+RUN pnpm build
+
+# Stage 2: Build Backend
+FROM golang:alpine AS backend-builder
+WORKDIR /app
+RUN apk add --no-cache git make
+RUN go install github.com/knadh/stuffbin/stuffbin@latest
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
+RUN make build-backend
+RUN make stuff
+
+# Stage 3: Final Image
 FROM alpine:latest
-
-# Install necessary packages
-RUN apk --no-cache add ca-certificates tzdata
-
-# Set the working directory to /libredesk
 WORKDIR /libredesk
-
-# Copy necessary files
-COPY libredesk .
+RUN apk --no-cache add ca-certificates tzdata
+COPY --from=backend-builder /app/libredesk .
 COPY config.sample.toml config.toml
-
-# Expose port 9000 for the application
 EXPOSE 9000
-
-# Set the default command to run the libredesk binary
 CMD ["./libredesk"]
