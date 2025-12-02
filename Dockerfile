@@ -25,4 +25,4 @@ WORKDIR /libredesk
 RUN apk --no-cache add ca-certificates tzdata
 COPY --from=backend-builder /app/libredesk .
 EXPOSE 9000
-CMD ["sh", "-c", "./libredesk --install --idempotent-install --yes && ./libredesk"]
+CMD ["sh", "-c", "./libredesk --install --idempotent-install --yes && ./libredesk --upgrade --yes && ./libredesk"]
