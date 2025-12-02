@@ -24,6 +24,5 @@ FROM alpine:latest
 WORKDIR /libredesk
 RUN apk --no-cache add ca-certificates tzdata
 COPY --from=backend-builder /app/libredesk .
-COPY config.sample.toml config.toml
 EXPOSE 9000
-CMD ["./libredesk"]
+CMD ["sh", "-c", "./libredesk --install --idempotent-install --yes && ./libredesk"]
