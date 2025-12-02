@@ -25,6 +25,7 @@
               <SelectGroup>
                 <SelectItem value="en"> English </SelectItem>
                 <SelectItem value="mr"> Marathi </SelectItem>
+                <SelectItem value="fr"> Français </SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
