@@ -592,7 +592,7 @@
   "search.searchBy": "Rechercher par numéro de référence, adresse email de contact ou messages dans les conversations.",
   "search.adjustSearchTerms": "Essayez d'ajuster vos termes de recherche ou filtres.",
   "sla.overdueBy": "En retard de",
-  "sla.met": "SLA respecté",
+  "sla.met": "SLA respectée",
   "view.form.description": "Créez et enregistrez des vues de filtre personnalisées pour un accès rapide à vos conversations.",
   "view.form.name.description": "Entrez un nom unique pour votre vue.",
   "view.form.filters.description": "Définissez un ou plusieurs filtres pour personnaliser la vue.",
@@ -627,7 +627,7 @@
   "conversation.allLoaded": "Toutes les conversations chargées",
   "conversation.showQuotedText": "Afficher le texte cité",
   "conversation.hideQuotedText": "Masquer le texte cité",
-  "conversation.sidebar.information": "Information",
+  "conversation.sidebar.information": "Informations",
   "conversation.sidebar.contactAttributes": "Attributs du contact",
   "conversation.sidebar.previousConvo": "Conversations précédentes",
   "conversation.sidebar.noPreviousConvo": "Aucune conversation précédente",
@@ -647,5 +647,9 @@
   "contact.notes.help": "Ajoutez une note pour ce contact afin de garder une trace des informations importantes et des conversations.",
   "setup.completeYourSetup": "Complétez votre configuration",
   "setup.createFirstInbox": "Créez votre première boîte de réception",
-  "setup.inviteTeammates": "Invitez des coéquipiers"
+  "setup.inviteTeammates": "Invitez des collaborateurs",
+  "replyBox.bcc": "Cci",
+  "replyBox.removeBcc": "Supprimer Cci",
+  "replyBox.to": "À",
+  "replyBox.cc": "Cc"
 }

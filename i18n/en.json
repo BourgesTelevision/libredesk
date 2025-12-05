@@ -647,5 +647,9 @@
   "contact.notes.help": "Add note for this contact to keep track of important information and conversations.",
   "setup.completeYourSetup": "Complete your setup",
   "setup.createFirstInbox": "Create your first inbox",
-  "setup.inviteTeammates": "Invite teammates"
+  "setup.inviteTeammates": "Invite teammates",
+  "replyBox.bcc": "BCC",
+  "replyBox.removeBcc": "Remove BCC",
+  "replyBox.to": "To",
+  "replyBox.cc": "CC"
 }

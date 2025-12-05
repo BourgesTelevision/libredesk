@@ -606,5 +606,9 @@
     "contact.unblockConfirm": "तुम्हाला खात्री आहे की तुम्ही या संपर्काला अनब्लॉक करू इच्छिता? ते पुन्हा तुमच्याशी संवाद साधू शकतील.",
     "contact.alreadyExistsWithEmail": "समान ईमेल असलेला दुसरा संपर्क आधीच अस्तित्वात आहे",
     "contact.notes.empty": "अजून कोणत्याही टिपा नाहीत",
-    "contact.notes.help": "महत्वाची माहिती आणि संभाषणे ट्रॅक ठेवण्यासाठी या संपर्कासाठी टीप जोडा."
+    "contact.notes.help": "महत्वाची माहिती आणि संभाषणे ट्रॅक ठेवण्यासाठी या संपर्कासाठी टीप जोडा.",
+    "replyBox.bcc": "BCC",
+    "replyBox.removeBcc": "Remove BCC",
+    "replyBox.to": "To",
+    "replyBox.cc": "CC"
 }

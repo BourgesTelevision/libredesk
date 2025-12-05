@@ -35,7 +35,7 @@
       v-if="messageType === 'reply'"
     >
       <div class="flex items-center space-x-2">
-        <label class="w-12 text-sm font-medium text-muted-foreground">TO:</label>
+        <label class="w-12 text-sm font-medium text-muted-foreground">{{ $t('replyBox.toLabel') }}</label>
         <Input
           type="text"
           :placeholder="t('replyBox.emailAddresess')"
@@ -45,7 +45,7 @@
         />
       </div>
       <div class="flex items-center space-x-2">
-        <label class="w-12 text-sm font-medium text-muted-foreground">CC:</label>
+        <label class="w-12 text-sm font-medium text-muted-foreground">{{ $t('replyBox.ccLabel') }}</label>
         <Input
           type="text"
           :placeholder="t('replyBox.emailAddresess')"
@@ -58,11 +58,11 @@
           @click="toggleBcc"
           class="text-sm bg-secondary text-secondary-foreground hover:bg-secondary/80"
         >
-          {{ showBcc ? 'Remove BCC' : 'BCC' }}
+          {{ showBcc ? $t('replyBox.removeBcc') : $t('replyBox.bcc') }}
         </Button>
       </div>
       <div v-if="showBcc" class="flex items-center space-x-2">
-        <label class="w-12 text-sm font-medium text-muted-foreground">BCC:</label>
+        <label class="w-12 text-sm font-medium text-muted-foreground">{{ $t('replyBox.bccLabel') }}</label>
         <Input
           type="text"
           :placeholder="t('replyBox.emailAddresess')"
